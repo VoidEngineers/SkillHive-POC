@@ -1,0 +1,40 @@
+installation steps  
+------------------
+
+install xampp for database 
+
+setup cloudnary  account and create a media library 
+
+make two preset names 
+
+cloud_video_preset
+cloud_upload_img
+
+
+setup intellij id for the backend install maven and nodejs  
+
+install java 17 
+
+install visual studio code 
+
+-------------------------------
+
+
+project setup 
+
+download the zip folder and extract it
+
+open client in the visual studio code and open Caketaglinebackend in the intellij 
+
+in the visual studio code 
+
+npm install
+npm start 
+
+
+in the backend intellij 
+
+build the project in the java 17 and run the project
+
+make sure the database is alredy created in the application propertyfile name
+
