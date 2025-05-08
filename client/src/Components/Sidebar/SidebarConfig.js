@@ -24,11 +24,6 @@ export const mainu = [
     activeIcon: <AiFillHome className="text-2xl mr-5" />,
   },
   {
-    title: "About Us",
-    icon: <AiOutlineInfoCircle className="text-2xl mr-5" />,
-    activeIcon: <AiOutlineInfoCircle className="text-2xl mr-5" />,
-  },
-  {
     title: "Search",
     icon: <AiOutlineSearch className="text-2xl mr-5" />,
     activeIcon: <AiOutlineSearch className="text-2xl mr-5" />,

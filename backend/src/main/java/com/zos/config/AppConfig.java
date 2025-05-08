@@ -43,7 +43,15 @@ public class AppConfig {
 				.requestMatchers(HttpMethod.POST, "/signup").permitAll()
 				.requestMatchers(HttpMethod.GET, "/api").permitAll()
 				.requestMatchers("/oauth2/**", "/login/**", "/oauth-user").permitAll()
+				.requestMatchers(
+						"/swagger-ui/**",
+						"/swagger-resources/**",
+						"/v3/api-docs/**",
+						"/v2/api-docs",
+						"/webjars/**"
+				).permitAll()
 				.anyRequest().authenticated()
+
 				.and()
 				.oauth2Login(oauth -> oauth
 						.defaultSuccessUrl("http://localhost:3000/oauth-success", true)

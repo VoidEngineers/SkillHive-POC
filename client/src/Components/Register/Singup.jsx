@@ -58,11 +58,11 @@ if(auth.signup?.username){
     <div>
         <div className="border border-slate-300 ">
       <Box p={8} display="flex" flexDirection="column" alignItems="center">
-        <img
+        {/* <img
           className="border border-red-800"
           src="https://static.vecteezy.com/system/resources/previews/012/698/054/original/simple-cake-logo-with-a-combination-of-a-cake-and-cherry-with-stylish-lettering-vector.jpg"
           alt=""
-        />
+        /> */}
         <Formik
           initialValues={initialValues}
           onSubmit={handleSubmit}

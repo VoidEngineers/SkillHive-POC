@@ -58,7 +58,7 @@ const Signin = () => {
       navigate(`/${user.reqUser?.username}`)
       toast({
         title: "Sign in successful!",
-        description: "Welcome back to Cake Shop!",
+        description: "Welcome back",
         status: "success",
         duration: 5000,
         isClosable: true,

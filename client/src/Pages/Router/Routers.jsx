@@ -49,7 +49,7 @@ const Routers = () => {
               <HomePage />
             </ProtectedRoute>
           } />
-          <Route path="/about" element={<AboutUs />} />
+          {/* <Route path="/about" element={<AboutUs />} /> */}
           <Route path="/p/:postId" element={
             <ProtectedRoute>
               <HomePage />
