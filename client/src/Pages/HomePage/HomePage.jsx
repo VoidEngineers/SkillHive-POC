@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import HomeRight from "../../Components/HomeRight/HomeRight";
 import PostCard from "../../Components/Post/PostCard/PostCard";
 import StoryCircle from "../../Components/Story/StoryCircle/StoryCircle";
 
-import { hasStory, suggetions, timeDifference } from "../../Config/Logic";
+import { hasStory, timeDifference } from "../../Config/Logic";
 import { findUserPost } from "../../Redux/Post/Action";
 import {
 	findByUserIdsAction,

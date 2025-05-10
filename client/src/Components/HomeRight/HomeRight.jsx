@@ -1,5 +1,3 @@
-import React from "react";
-import { BsDot } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import SuggestionsUserCard from "./SuggestionsUserCard";
 

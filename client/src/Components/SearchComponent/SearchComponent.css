@@ -1,18 +1,22 @@
 .search-container {
   width: 100%;
   height: 100%;
+  max-height: 80vh; /* Added max-height constraint */
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden; /* Prevent overflow */
 }
 
 .search-header {
   padding: 20px;
   border-bottom: 1px solid #f0f0f0;
   background: #fafafa;
+  flex-shrink: 0; /* Prevent header from shrinking */
+  z-index: 2; /* Ensure header stays on top */
 }
 
 .search-title {
@@ -37,6 +41,7 @@
   transform: translateY(-50%);
   color: #8c8c8c;
   font-size: 16px;
+  z-index: 1;
 }
 
 .search-input {
@@ -63,7 +68,11 @@
 .search-results {
   flex: 1;
   overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal overflow */
   padding: 16px;
+  min-height: 100px;
+  max-height: calc(80vh - 120px); /* Adjusted max-height */
+  position: relative; /* For positioning empty states */
 }
 
 .search-results-loading,
@@ -75,6 +84,7 @@
   justify-content: center;
   height: 200px;
   gap: 16px;
+  width: 100%; /* Ensure full width */
 }
 
 .search-results-loading-text {
@@ -139,7 +149,15 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .search-container {
+    max-height: 100vh;
+    height: 100%;
     border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
   }
   
   .search-header {
@@ -153,5 +171,27 @@
   
   .search-results {
     padding: 1rem;
+    max-height: calc(100vh - 100px);
   }
 }
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .search-container {
+    height: -webkit-fill-available;
+  }
+  
+  .search-results {
+    max-height: calc(80vh - 140px);
+  }
+  
+  @media (max-width: 768px) {
+    .search-results {
+      max-height: calc(100vh - 120px);
+    }
+  }
+}
+
+
+
+
