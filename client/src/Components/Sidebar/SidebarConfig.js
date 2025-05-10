@@ -15,7 +15,6 @@ import {
 } from "react-icons/ai";
 import { RiVideoFill, RiVideoLine } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
-import { AiOutlineInfoCircle } from "react-icons/ai";
 
 export const mainu = [
   {

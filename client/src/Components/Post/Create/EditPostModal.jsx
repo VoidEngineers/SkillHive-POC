@@ -7,18 +7,18 @@ import {
 	ModalOverlay,
 } from "@chakra-ui/modal";
 
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { FaPhotoVideo } from "react-icons/fa";
 import "./CreatePostModal.css";
 import { GoLocation } from "react-icons/go";
 import { GrEmoji } from "react-icons/gr";
 import { Button } from "@chakra-ui/button";
 import { useDispatch, useSelector } from "react-redux";
-import { createPost, findPostByIdAction } from "../../../Redux/Post/Action";
+// import { createPost, findPostByIdAction } from "../../../Redux/Post/Action";
 import { uploadToCloudinary } from "../../../Config/UploadToCloudinary";
-import CommentModal from "../../Comment/CommentModal";
-import SpinnerCard from "../../Spinner/Spinner";
-import { useParams } from "react-router-dom";
+// import CommentModal from "../../Comment/CommentModal";
+// import SpinnerCard from "../../Spinner/Spinner";
+// import { useParams } from "react-router-dom";
 import { editPOst } from "../../../Redux/Post/Action";
 import { useToast } from "@chakra-ui/react";
 
